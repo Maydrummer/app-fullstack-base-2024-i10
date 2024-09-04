@@ -7,5 +7,5 @@ function SayHello(){
 }
 
 window.addEventListener("load",  ()=> {
-    
+    SayHello();
 });
