@@ -1,7 +1,16 @@
 class Persona
 {
     public nombre:string;
-    public edad:number;
+    private edad:number;
+    constructor(edad:number,nombre:string)
+    {
+        this.edad = edad;
+        this.nombre = nombre;
+    }
+    public mostrar():string
+    {
+        return this.nombre + " Edad:" + this.edad;
+    }
 }
 
 function SayHello(){
@@ -11,15 +20,10 @@ function SayHello(){
 
 }
 
-function mostrar(per:Persona)
-{
-    alert(per.nombre + " " + per.edad);
-}
 
 window.addEventListener("load",  ()=> {
     SayHello();
-    let persona1:Persona = new Persona();
-    persona1.edad = 26;
-    persona1.nombre = "Anthony Maisincho";
-    mostrar(persona1);
+    let persona1:Persona = new Persona(26,"Anthony Maisincho");
+    alert(persona1.mostrar());
+    
 });
