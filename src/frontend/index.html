@@ -7,6 +7,7 @@
       <script type="text/javascript" src="./static/js/materialize.min.js"></script>
       <script type="text/javascript" src="js/main.js"></script>
       <script src="js/user.js"></script>
+      <script src="js/device.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
@@ -23,30 +24,29 @@
             </nav>	
             <!-- Page Body -->
             <div class="container">
-                <div class="row">
-                    <div class= "col xl6 s12">
-                        <br/>
-                        <h3>Prueba 1</h3>
-                        <br/>
-                    </div>
-                    <div class= "col xl6 s12">
-                        <br/>
-                        <h3>Prueba 2</h3>
-                        <br/>
-                    </div>
-                </div> 
-
                 <br/>
-                <h3>Smart Home Dashboard</h3>
+                <h2 style="color: rgba(8, 2, 92, 0.959); font-weight: bold;">Smart Home Dashboard</h2>
                 <br/>
                 <div class="row">
-                    <div class="input-field col s12 m12 l12 xl12">
-                        <textarea id="textarea_1" class="materialize-textarea" style="height: 150px;" readonly></textarea>
+                    <div class= "col xl6 s12">
+                        <h3 style="color: rgba(8, 2, 92, 0.959); font-weight: bold;">Equipos Matriculados</h3>
+                        <div id="list"></div>
+                        <br/>
+                        <br/>
+                        <button id="btn_devices" class="btn waves-effect waves-light button-view" >Reload</button>
+                    </div>  
+                    <div class= "col xl6 s12">
+                        <h3 style="color: rgba(8, 2, 92, 0.959); font-weight: bold;">Agregar equipos</h3>
+                        <h4>Nombre de equipo: </h4>
+                        <div class="input-field">
+                            <textarea id="name_device" class="materialize-textarea" style="height: 12px;" writeonly></textarea>
+                        </div>
+                        <h4>Descripcion: </h4>
+                        <div class="input-field">
+                            <textarea id="descripcion" class="materialize-textarea" style="height: 12px;" writeonly></textarea>
+                        </div>
+                        <button id="btn_matricular" class="btn waves-effect waves-light button-view">Matricular</button>
                     </div>
-                    <div class="col s4 m4 l2 xl2">
-                        <button id="btn" class="btn waves-effect waves-light button-view" name="hello_button">PRESS ME</button>
-                    </div>
-                    <input id="ent" type="password" />
                 </div>
             </div>	
         </main>
